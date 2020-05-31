@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ProductTable from './component/ProductTable';
 import * as serviceWorker from './serviceWorker';
+
+
+  const products = [
+  {id:1, nom:"pc", prix:"1000dt", categorie:"Electronics"},
+  {id:2, nom:"pull", prix:"80dt", categorie:"Clothes"}
+];
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ProductTable products={products}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
 serviceWorker.unregister();
